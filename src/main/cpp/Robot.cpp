@@ -5,7 +5,8 @@ using namespace std;
 
 //--------------------------------------------------------------------------------
 //
-void Robot::RobotInit(){
+void Robot::RobotInit()
+{
   m_rev_hardware.init();
   m_led.init();
   robot_init = true;
@@ -14,29 +15,31 @@ void Robot::RobotInit(){
 
 //--------------------------------------------------------------------------------
 //
-void Robot::TeleopInit(){}
+void Robot::TeleopInit() {}
 
 //--------------------------------------------------------------------------------
 //
-void Robot::TeleopPeriodic(){
-  m_rev_hardware.runVortexWithRT();
-  cout << "vortex temp " << m_rev_hardware.getVortexTemperature() << "\n";
+void Robot::TeleopPeriodic()
+{
+  // m_rev_hardware.runVortexWithRT();
+  // cout << "vortex temp " << m_rev_hardware.getVortexTemperature() << "\n";
+
+  m_dio.printSICKSensorValue();
 }
 
 //--------------------------------------------------------------------------------
 //
-void Robot::DisabledInit(){}
+void Robot::DisabledInit() {}
 
 //--------------------------------------------------------------------------------
 //
-void Robot::DisabledPeriodic(){}
+void Robot::DisabledPeriodic() {}
 
 //--------------------------------------------------------------------------------
 //
 #ifndef RUNNING_FRC_TESTS
-int main() {
+int main()
+{
   return frc::StartRobot<Robot>();
 }
 #endif
-
-

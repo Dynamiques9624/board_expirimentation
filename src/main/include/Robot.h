@@ -6,6 +6,7 @@
 #include "LED.h"
 #include "RevHardware.h"
 #include "Servo.h"
+#include "DIO.h"
 
 #include <iostream>
 using namespace std;
@@ -25,4 +26,5 @@ class Robot : public frc::TimedRobot {
     Servo m_servo{&m_xbox};
     Led m_led{&m_xbox};
     RevHardware m_rev_hardware{&m_xbox};
+    Dio m_dio;
 };
