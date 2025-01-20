@@ -11,8 +11,8 @@ class Xbox {
     double getLeftStickYValue() { return m_controller.GetLeftY(); }
     double getRightStickXValue() { return m_controller.GetRightX(); }
     double getRightStickYValue() { return m_controller.GetRightY(); }
-    bool getLeftBumperValue() { return m_controller.GetLeftBumper(); }
-    bool getRightBumperValue() { return m_controller.GetRightBumper(); }
+    bool getLeftBumperValue() { return m_controller.GetLeftBumperButton(); }
+    bool getRightBumperValue() { return m_controller.GetRightBumperButton(); }
     bool isLeftBumperPressed();
     bool isRightBumperPressed();
     bool isPOV0Pressed();

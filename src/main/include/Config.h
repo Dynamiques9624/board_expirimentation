@@ -11,6 +11,8 @@
 #define NEO_ID 4
 
 #define ENCODER_DIO_PORT 0
+#define ENCODER_VALUE_FULL_ROTATION 360.0
+#define ENCODER_REPORT_ZERO 0.0
 
 //--------------------------------------------------------------------------------
 //config for Led class

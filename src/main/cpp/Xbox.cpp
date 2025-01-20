@@ -4,7 +4,7 @@
 // return one true when the bumper is press
 bool Xbox::isLeftBumperPressed() {
     bool left_bumper_press_final = false;
-    bool left_bumper = m_controller.GetLeftBumper();
+    bool left_bumper = m_controller.GetLeftBumperButton();
 
     if (!left_bumper) {
         m_left_bumper_press = false;
@@ -12,6 +12,7 @@ bool Xbox::isLeftBumperPressed() {
         left_bumper_press_final = true;
         m_left_bumper_press = true;
     }
+    
     return left_bumper_press_final;
 }
 
@@ -19,7 +20,7 @@ bool Xbox::isLeftBumperPressed() {
 // return one true when the bumper is press
 bool Xbox::isRightBumperPressed() {
     bool right_bumper_press_final = false;
-    bool right_bumper = m_controller.GetRightBumper();
+    bool right_bumper = m_controller.GetRightBumperButton();
 
     if (!right_bumper) {
         m_right_bumper_press = false;
