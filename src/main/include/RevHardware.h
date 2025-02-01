@@ -7,6 +7,7 @@
 #include <rev/SparkMax.h>
 #include <rev/SparkFlex.h>
 #include <frc/DutyCycleEncoder.h>
+#include <frc/DigitalInput.h>
 
 class RevHardware {
    public:
@@ -25,5 +26,9 @@ class RevHardware {
     Xbox* m_xbox;
     rev::spark::SparkMax m_neo_550{NEO_550_ID, rev::spark::SparkMax::MotorType::kBrushless};
     rev::spark::SparkMax m_neo{NEO_ID, rev::spark::SparkMax::MotorType::kBrushless};
-    rev::spark::SparkFlex m_vortex{NEO_VORTEX_ID, rev::spark::SparkFlex::MotorType::kBrushless};    
+    rev::spark::SparkFlex m_vortex{NEO_VORTEX_ID, rev::spark::SparkFlex::MotorType::kBrushless}; 
+
+    frc::DigitalInput m_elevator_limit_switch1{DIO_PORT_SICK_SENSOR};
+    frc::DigitalInput m_elevator_limit_switch2{DIO_PORT_SICK_SENSOR};
+      
 };
