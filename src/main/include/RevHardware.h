@@ -7,7 +7,6 @@
 #include <rev/SparkMax.h>
 #include <rev/SparkFlex.h>
 #include <frc/DutyCycleEncoder.h>
-#include <frc/DutyCycleEncoder.h>
 
 class RevHardware {
    public:
@@ -17,6 +16,7 @@ class RevHardware {
     double getVortexTemperature(){return m_vortex.GetMotorTemperature();}
     void runVortexWithRT();
     void runNeoWithLeftStickY();
+    void elevator();
    protected:
    private:
 

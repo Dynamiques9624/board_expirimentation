@@ -17,3 +17,17 @@ void RevHardware::runNeoWithLeftStickY(){
     double left_stick_y = m_xbox->getLeftStickYValue();
     m_neo.Set(left_stick_y);
 }
+
+void RevHardware::elevator(){
+    if (m_xbox->getLeftBumperValue()){
+        m_neo_550.Set(-0.20);
+        m_neo.Set(0.20);    
+    }
+    else if (m_xbox->getRightBumperValue()){
+        m_neo_550.Set(0.20);
+        m_neo.Set(-0.20); 
+    }else{
+        m_neo_550.Set(0);
+        m_neo.Set(0); 
+    }    
+}
