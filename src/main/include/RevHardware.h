@@ -28,7 +28,7 @@ class RevHardware {
     rev::spark::SparkMax m_neo{NEO_ID, rev::spark::SparkMax::MotorType::kBrushless};
     rev::spark::SparkFlex m_vortex{NEO_VORTEX_ID, rev::spark::SparkFlex::MotorType::kBrushless}; 
 
-    frc::DigitalInput m_elevator_limit_switch1{DIO_PORT_SICK_SENSOR};
-    frc::DigitalInput m_elevator_limit_switch2{DIO_PORT_SICK_SENSOR};
+    frc::DigitalInput m_elevator_limit_switch1{2};
+    frc::DigitalInput m_elevator_limit_switch2{3};
       
 };
