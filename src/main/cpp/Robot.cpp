@@ -16,17 +16,19 @@ void Robot::RobotInit()
 //--------------------------------------------------------------------------------
 //
 void Robot::TeleopInit() {
-  m_rev_hardware.elevator();
+  
 }
 
 //--------------------------------------------------------------------------------
 //
 void Robot::TeleopPeriodic()
 {
+  m_rev_hardware.elevator();
+  
   // m_rev_hardware.runVortexWithRT();
   // cout << "vortex temp " << m_rev_hardware.getVortexTemperature() << "\n";
 
-  m_dio.printSICKSensorValue();
+  // m_dio.printSICKSensorValue();
 }
 
 //--------------------------------------------------------------------------------

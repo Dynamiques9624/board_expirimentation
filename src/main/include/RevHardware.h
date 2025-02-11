@@ -14,7 +14,7 @@ class RevHardware {
     RevHardware(Xbox* xbox){m_xbox = xbox;}
     void init();
     double getEncoderDistance(){return m_encoder.Get();}
-    double getVortexTemperature(){return m_vortex.GetMotorTemperature();}
+    // double getVortexTemperature(){return m_vortex.GetMotorTemperature();}
     void runVortexWithRT();
     void runNeoWithLeftStickY();
     void elevator();
@@ -26,9 +26,14 @@ class RevHardware {
     Xbox* m_xbox;
     rev::spark::SparkMax m_neo_550{NEO_550_ID, rev::spark::SparkMax::MotorType::kBrushless};
     rev::spark::SparkMax m_neo{NEO_ID, rev::spark::SparkMax::MotorType::kBrushless};
-    rev::spark::SparkFlex m_vortex{NEO_VORTEX_ID, rev::spark::SparkFlex::MotorType::kBrushless}; 
+    // rev::spark::SparkFlex m_vortex{NEO_VORTEX_ID, rev::spark::SparkFlex::MotorType::kBrushless}; 
+    rev::spark::SparkMax m_neo_pince{NEO_PINCE, rev::spark::SparkMax::MotorType::kBrushless};
+    rev::spark::SparkMax m_algue{13, rev::spark::SparkMax::MotorType::kBrushless};
 
-    frc::DigitalInput m_elevator_limit_switch1{2};
+    rev::spark::SparkMax m_coude{14, rev::spark::SparkMax::MotorType::kBrushless};
+    rev::spark::SparkMax m_rotation{15, rev::spark::SparkMax::MotorType::kBrushless};
+
+    frc::DigitalInput m_elevator_limit_switch1{9};
     frc::DigitalInput m_elevator_limit_switch2{3};
       
 };
