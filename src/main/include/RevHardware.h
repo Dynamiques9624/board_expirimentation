@@ -13,22 +13,23 @@ class RevHardware {
    public:
     RevHardware(Xbox* xbox){m_xbox = xbox;}
     void init();
-    double getEncoderDistance(){return m_encoder.Get();}
+    //double getEncoderDistance(){return m_encoder.Get();}
     // double getVortexTemperature(){return m_vortex.GetMotorTemperature();}
     void runVortexWithRT();
     void runNeoWithLeftStickY();
     void elevator();
+    void testBras();
    protected:
    private:
 
-    frc::DutyCycleEncoder m_encoder{ENCODER_DIO_PORT,ENCODER_VALUE_FULL_ROTATION,ENCODER_REPORT_ZERO};
+    //frc::DutyCycleEncoder m_encoder{ENCODER_DIO_PORT,ENCODER_VALUE_FULL_ROTATION,ENCODER_REPORT_ZERO};
 
     Xbox* m_xbox;
-    rev::spark::SparkMax m_neo_550{NEO_550_ID, rev::spark::SparkMax::MotorType::kBrushless};
-    rev::spark::SparkMax m_neo{NEO_ID, rev::spark::SparkMax::MotorType::kBrushless};
+    //rev::spark::SparkMax m_neo_550{NEO_550_ID, rev::spark::SparkMax::MotorType::kBrushless};
+    //rev::spark::SparkMax m_neo{NEO_ID, rev::spark::SparkMax::MotorType::kBrushless};
     // rev::spark::SparkFlex m_vortex{NEO_VORTEX_ID, rev::spark::SparkFlex::MotorType::kBrushless}; 
-    rev::spark::SparkMax m_neo_pince{NEO_PINCE, rev::spark::SparkMax::MotorType::kBrushless};
-    rev::spark::SparkMax m_algue{13, rev::spark::SparkMax::MotorType::kBrushless};
+    //rev::spark::SparkMax m_neo_pince{NEO_PINCE, rev::spark::SparkMax::MotorType::kBrushless};
+    //rev::spark::SparkMax m_algue{13, rev::spark::SparkMax::MotorType::kBrushless};
 
     rev::spark::SparkMax m_coude{14, rev::spark::SparkMax::MotorType::kBrushless};
     rev::spark::SparkMax m_rotation{15, rev::spark::SparkMax::MotorType::kBrushless};

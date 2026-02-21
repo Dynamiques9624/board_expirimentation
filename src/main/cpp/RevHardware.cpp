@@ -1,5 +1,8 @@
 #include "RevHardware.h"
 
+
+#include <iostream>
+using namespace std;
 //--------------------------------------------------------------------------------
 //
 void RevHardware::init(){}
@@ -15,11 +18,11 @@ void RevHardware::runVortexWithRT(){
 //
 void RevHardware::runNeoWithLeftStickY(){
     double left_stick_y = m_xbox->getLeftStickYValue();
-    m_neo.Set(left_stick_y);
+    //m_neo.Set(left_stick_y);
 }
 
 //--------------------------------------------------------------------------------
-//
+/*
 void RevHardware::elevator(){
     #define SPEED 0.15
 
@@ -72,4 +75,21 @@ void RevHardware::elevator(){
     }
     
        
+}
+ */
+
+void RevHardware::testBras(){
+    double value_xbox = m_xbox->getLeftStickYValue();
+    
+    cout << "Robot initialise " << value_xbox << "\n";
+    if(abs(value_xbox)<0.05){
+        value_xbox = 0.0;
+    }
+
+    if(abs(value_xbox)>0.6){
+        value_xbox = 0.6;
+    }
+
+    m_coude.Set(value_xbox);
+    m_rotation.Set(-value_xbox);
 }

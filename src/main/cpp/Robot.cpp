@@ -2,6 +2,7 @@
 using namespace std;
 
 #include "Robot.h"
+#include <frc/smartdashboard/SmartDashboard.h>
 
 //--------------------------------------------------------------------------------
 //
@@ -23,11 +24,12 @@ void Robot::TeleopInit() {
 //
 void Robot::TeleopPeriodic()
 {
-  m_rev_hardware.elevator();
+ // m_rev_hardware.elevator();
+ m_rev_hardware.testBras();
   
   // m_rev_hardware.runVortexWithRT();
-  // cout << "vortex temp " << m_rev_hardware.getVortexTemperature() << "\n";
-
+  // cout << "encoder distance " << m_rev_hardware.getEncoderDistance()<< "\n";
+  //frc::SmartDashboard::PutNumber("encoder distance", m_rev_hardware.getEncoderDistance());
   // m_dio.printSICKSensorValue();
 }
 

@@ -11,8 +11,8 @@
 #define NEO_ID 11
 #define NEO_PINCE 16
 
-#define ENCODER_DIO_PORT 0
-#define ENCODER_VALUE_FULL_ROTATION 360.0
+#define ENCODER_DIO_PORT 6
+#define ENCODER_VALUE_FULL_ROTATION 360
 #define ENCODER_REPORT_ZERO 0.0
 
 //--------------------------------------------------------------------------------
