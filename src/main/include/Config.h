@@ -7,9 +7,8 @@
 //--------------------------------------------------------------------------------
 //config for RevHardware class
 #define NEO_550_ID 12
-// #define NEO_VORTEX_ID 3
+#define NEO_VORTEX_ID 3
 #define NEO_ID 11
-#define NEO_PINCE 16
 
 #define ENCODER_DIO_PORT 6
 #define ENCODER_VALUE_FULL_ROTATION 360

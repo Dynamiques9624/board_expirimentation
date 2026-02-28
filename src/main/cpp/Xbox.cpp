@@ -1,37 +1,6 @@
 #include "Xbox.h"
 
 //--------------------------------------------------------------------------------
-// return one true when the bumper is press
-bool Xbox::isLeftBumperPressed() {
-    bool left_bumper_press_final = false;
-    bool left_bumper = m_controller.GetLeftBumperButton();
-
-    if (!left_bumper) {
-        m_left_bumper_press = false;
-    } else if (left_bumper && m_left_bumper_press == false) {
-        left_bumper_press_final = true;
-        m_left_bumper_press = true;
-    }
-    
-    return left_bumper_press_final;
-}
-
-//--------------------------------------------------------------------------------
-// return one true when the bumper is press
-bool Xbox::isRightBumperPressed() {
-    bool right_bumper_press_final = false;
-    bool right_bumper = m_controller.GetRightBumperButton();
-
-    if (!right_bumper) {
-        m_right_bumper_press = false;
-    } else if (right_bumper && m_right_bumper_press == false) {
-        right_bumper_press_final = true;
-        m_right_bumper_press = true;
-    }
-    return right_bumper_press_final;
-}
-
-//--------------------------------------------------------------------------------
 //
 bool Xbox::isPOV0Pressed() {
     bool pov_0_press_final = false;
