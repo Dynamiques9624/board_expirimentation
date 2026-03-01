@@ -23,7 +23,8 @@ void Robot::TeleopInit() {
 //
 void Robot::TeleopPeriodic()
 {
-  m_dio.printSICKSensorValue();
+  m_dio.printSICKSensorValueCout();
+  m_dio.printSICKSensorValueSmartDashboard();
 }
 
 //--------------------------------------------------------------------------------

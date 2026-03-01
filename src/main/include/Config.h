@@ -28,8 +28,5 @@
 #define DIO_PORT_0_SICK 0
 #define DIO_PORT_1_SICK 1
 #define DIO_PORT_2_SICK 2
-#define DIO_PORT_3_SICK 3
-#define DIO_PORT_4_SICK 4
-#define DIO_PORT_5_SICK 5
-#define DIO_PORT_6_SICK 6
+
 

@@ -5,6 +5,7 @@
 
 #include <frc/DigitalInput.h>
 #include "Config.h"
+#include <frc/smartdashboard/SmartDashboard.h>
 
 #include <iostream>
 using namespace std;
@@ -12,7 +13,8 @@ using namespace std;
 class Dio
 {
 public:
-    void printSICKSensorValue();
+    void printSICKSensorValueCout();
+    void printSICKSensorValueSmartDashboard();
 
 protected:
 private:
@@ -21,8 +23,4 @@ private:
     frc::DigitalInput SICK_0{DIO_PORT_0_SICK};
     frc::DigitalInput SICK_1{DIO_PORT_1_SICK};
     frc::DigitalInput SICK_2{DIO_PORT_2_SICK};
-    frc::DigitalInput SICK_3{DIO_PORT_3_SICK};
-    frc::DigitalInput SICK_4{DIO_PORT_4_SICK};
-    frc::DigitalInput SICK_5{DIO_PORT_5_SICK};
-    frc::DigitalInput SICK_6{DIO_PORT_6_SICK};
 };
