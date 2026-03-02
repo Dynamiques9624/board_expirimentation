@@ -23,4 +23,11 @@ private:
     frc::DigitalInput SICK_0{DIO_PORT_0_SICK};
     frc::DigitalInput SICK_1{DIO_PORT_1_SICK};
     frc::DigitalInput SICK_2{DIO_PORT_2_SICK};
+    frc::DigitalInput SICK_3{3};
+    frc::DigitalInput SICK_4{4};
+    frc::DigitalInput SICK_5{5};
+    frc::DigitalInput SICK_6{6};
+    frc::DigitalInput SICK_7{7};
+    frc::DigitalInput SICK_8{8};
+    frc::DigitalInput SICK_9{9};
 };
