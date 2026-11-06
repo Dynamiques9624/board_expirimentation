@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Config.h"
-#include "frc/xboxcontroller.h"
+#include "frc/XboxController.h"
 
 class Xbox {
    public:
